@@ -56,14 +56,14 @@ printf("Player O enter name: ");
 fgets(po_name, 20, stdin);
 po_name[strcspn(po_name, "\n")] = 0;
 
+// Game starts here
 while (play == TRUE) {
         round = TRUE;
 
 grid_layout(grid, px_name, po_name, px_score, po_score);
-printf("%d", counter);
 
         while (round == TRUE) {
-                // Player grid selection input
+                // Player cell selection input
                 if (player == X) {
                         printf("Player %s turn place your %c 1-9:",
                                 px_name, player);
@@ -126,6 +126,7 @@ printf("%d", counter);
                 }
         }
 
+        // Grid reset
         counter++;
         if (counter >= 9 || score == TRUE) {
                 cell = counter = 0;
