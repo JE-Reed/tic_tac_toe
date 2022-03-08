@@ -1,3 +1,4 @@
 # tic_tac_toe
- Command line based tic tac toe game.
- Program will run until terminated.
+Two player CLI tic tac toe game.
+
+ Program will run until terminated ctrl-c.
