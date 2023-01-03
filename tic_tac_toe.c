@@ -1,34 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 /*
  * Author: Jake Reed
  * Year: 2022
  * Purpose: TIC TAC TOE
- * Language:  C
+ * Language: C
  */
 
+// Preprocessor section 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Definition section
 #define TRUE 1
 #define FALSE 0
 #define X 'X'
 #define O 'O'
 
-void grid_layout(char grid[9], char px_name[20], char po_name[20], int px_score, char po_score)
-{
-        // Grid layout
-        system("clear");
-        printf("\r    TIC TAC TOE");
-        printf("\n  ---   ---   ---");
-        printf("\n|  %c  |  %c  |  %c  |", grid[0], grid[1], grid[2]);
-        printf("\n  --- + --- + ---");
-        printf("\n|  %c  |  %c  |  %c  |", grid[3], grid[4], grid[5]);
-        printf("\n  --- + --- + ---");
-        printf("\n|  %c  |  %c  |  %c  |", grid[6], grid[7], grid[8]);
-        printf("\n  ---   ---   ---");
-        printf("\nScore");
-        printf("\n%-12s: %2d", px_name, px_score);
-        printf("\n%-12s: %2d\n", po_name, po_score);
-}
+// Global section
+
+// Main section
+void grid_layout(char grid[9], char px_name[20], char po_name[20], int px_score, char po_score);
 
 int main()
 {
@@ -148,4 +139,22 @@ grid_layout(grid, px_name, po_name, px_score, po_score);
                 player = X;
         }
         return 0;
+}
+
+// Function section
+void grid_layout(char grid[9], char px_name[20], char po_name[20], int px_score, char po_score)
+{
+        // Grid layout
+        system("clear");
+        printf("\r    TIC TAC TOE");
+        printf("\n  ---   ---   ---");
+        printf("\n|  %c  |  %c  |  %c  |", grid[0], grid[1], grid[2]);
+        printf("\n  --- + --- + ---");
+        printf("\n|  %c  |  %c  |  %c  |", grid[3], grid[4], grid[5]);
+        printf("\n  --- + --- + ---");
+        printf("\n|  %c  |  %c  |  %c  |", grid[6], grid[7], grid[8]);
+        printf("\n  ---   ---   ---");
+        printf("\nScore");
+        printf("\n%-12s: %2d", px_name, px_score);
+        printf("\n%-12s: %2d\n", po_name, po_score);
 }
